@@ -1,0 +1,11 @@
+<mat-card> 
+  <div class="center">
+    <form id = "formNewCSV" name ="formNewCSV" #CSVData = "ngForm" >
+        <label class="custom-file-upload"> Click to upload the XLSX file
+        <input id="file" name="file" type="file" (change)="addCSV();CSVData.reset() " placeholder="Upload a file..." multiple ngModel/>
+      </label>
+      <br><br>
+      </form>
+    </div>
+
+</mat-card>
