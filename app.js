@@ -35,7 +35,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //port
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3080;
 
 //cors
 app.use(cors());
