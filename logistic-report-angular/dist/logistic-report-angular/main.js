@@ -94,7 +94,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -157,7 +157,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _services_adddata_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/adddata.service */ "./src/app/services/adddata.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _services_getdata_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/getdata.service */ "./src/app/services/getdata.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -180,6 +182,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 //services
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -198,10 +202,11 @@ var AppModule = /** @class */ (function () {
                 _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
                 _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_10__["MatSnackBarModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_14__["HttpClientModule"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_13__["HttpModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"]
             ],
-            providers: [_services_adddata_service__WEBPACK_IMPORTED_MODULE_12__["AdddataService"]],
+            providers: [_services_adddata_service__WEBPACK_IMPORTED_MODULE_12__["AdddataService"], _services_getdata_service__WEBPACK_IMPORTED_MODULE_15__["GetdataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
@@ -219,7 +224,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    min-width:98%;\r\n    max-width:98%;\r\n    font-size: 1.1vw;\r\n    padding-top: 20px;\r\n}\r\n.backgraund{\r\n    border: 1px solid #dee2e6;\r\n    background-color: #bd9921;\r\n    color: #ffffff;\r\n    text-align: center;\r\n\r\n}\r\n.logo-class{\r\n   width: 15%;\r\n   margin-left: 20px;\r\n   margin-top: 20px; \r\n}\r\n.backgraund-two{\r\n    border: 1px solid #dee2e6;\r\n    background-color: #2e3e9b;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n.colom-style{\r\n    border: 1px solid #dee2e6;\r\n    padding: 20px;\r\n    text-align: center;\r\n    color: #ffffff;\r\n}\r\n.backgraud-photo{\r\n    z-index: -100;\r\n    position: fixed;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.class-for-table{\r\n   padding-left: 10px;\r\n   padding-right: 10px; \r\n   margin-top: 10px;\r\n}"
 
 /***/ }),
 
@@ -230,7 +235,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  data-show works!\n</p>\n"
+module.exports = "<img src=\"/assets/backgroundlogistic.png\" class=\"backgraud-photo \">\r\n<img src=\"assets/logo-final-A.png\" class=\"logo-class\"/>\r\n<div class=\"containers\">\r\n  <div class=\"row\">\r\n    <table  class=\"class-for-table\">\r\n      <th class=\"backgraund\">Supplier</th>\r\n      <th class=\"backgraund-two\">Invoice No.</th>\r\n      <th class=\"backgraund\">Inv. Amount</th>\r\n      <th class=\"backgraund-two\"> <img src=''>swift</th>\r\n      <th class=\"backgraund\">Supplier Readiness</th>\r\n      <th class=\"backgraund-two\">Legalization</th>\r\n      <th class=\"backgraund\">Pick Up</th>\r\n      <th class=\"backgraund-two\">Type</th>\r\n      <th class=\"backgraund\">Dep.</th>\r\n      <th class=\"backgraund-two\">ETA</th>\r\n      <th class=\"backgraund\">Bank</th>\r\n      <th class=\"backgraund-two\">Clearance</th>\r\n      <th class=\"backgraund\">NTRA</th>\r\n      <th class=\"backgraund-two\">Nat. Security</th>\r\n      <th class=\"backgraund\">Gate in </th>\r\n    \r\n      <tr *ngFor = \"let item of this.row_altered \">\r\n        <td class=\"colom-style\">{{item[0]}}</td>\r\n        <td class=\"colom-style\">{{item[1]}}</td>\r\n        <td class=\"colom-style\">{{item[2]}} {{item[3]}}</td>\r\n        <td class=\"colom-style\">{{item[4]}}</td>\r\n        <td class=\"colom-style\">{{item[5]}}</td>\r\n        <td class=\"colom-style\">{{item[6]}}</td>\r\n        <td class=\"colom-style\">{{item[7]}}</td>\r\n        <td class=\"colom-style\">{{item[8]}}</td>\r\n        <td class=\"colom-style\">{{item[9]}}</td>\r\n        <td class=\"colom-style\">{{item[10]}}</td>\r\n        <td class=\"colom-style\">{{item[11]}}</td>\r\n        <td class=\"colom-style\">{{item[12]}}</td>\r\n        <td class=\"colom-style\">{{item[13]}}</td>\r\n        <td class=\"colom-style\">{{item[14]}}</td>\r\n        <td class=\"colom-style\">{{item[15]}}</td>\r\n      </tr>\r\n    </table>\r\n\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -245,6 +250,7 @@ module.exports = "<p>\n  data-show works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataShowComponent", function() { return DataShowComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_getdata_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/getdata.service */ "./src/app/services/getdata.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -255,10 +261,48 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var DataShowComponent = /** @class */ (function () {
-    function DataShowComponent() {
+    function DataShowComponent(getdataservice) {
+        this.getdataservice = getdataservice;
+        this.row_altered = [];
     }
     DataShowComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.total_usd = 0;
+        this.total_euro = 0;
+        this.getdataservice.getCSVData('http://192.168.1.155:3080/fetchs/read_xls_file').subscribe(function (dataFromServer) {
+            var bodyJson = JSON.parse(dataFromServer._body);
+            _this.row = bodyJson[0].data;
+            console.log(_this.row);
+            for (var i = 4; i <= _this.row.length; i++) {
+                //  console.log(this.row[i][0])
+                if (_this.row[i][0] == null) {
+                    break;
+                }
+                else {
+                    _this.row_altered.push(_this.row[i]);
+                    // console.log(bodyJson[0].data[i][2])
+                    if (bodyJson[0].data[i][3] == 'USD') {
+                        _this.total_euro = bodyJson[0].data[i][2] + _this.total_euro;
+                    }
+                    if (bodyJson[0].data[i][3] == 'EUR') {
+                        _this.total_usd = bodyJson[0].data[i][2] + _this.total_usd;
+                    }
+                }
+                // for(let i=4; i<=this.row.length; i++){
+                //   if(this.row[i][])
+                // }
+            }
+            console.log(_this.total_euro);
+            console.log(_this.total_usd);
+            //  console.log(this.total);
+            //  if (this.value){
+            //  }
+            //  for(let i=5;i>15;i++){
+            //   console.log(bodyJson[i].data[i]);
+            // }
+        });
     };
     DataShowComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -266,7 +310,7 @@ var DataShowComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./data-show.component.html */ "./src/app/components/data-show/data-show.component.html"),
             styles: [__webpack_require__(/*! ./data-show.component.css */ "./src/app/components/data-show/data-show.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_getdata_service__WEBPACK_IMPORTED_MODULE_1__["GetdataService"]])
     ], DataShowComponent);
     return DataShowComponent;
 }());
@@ -293,7 +337,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"border\"><mat-toolbar color=\"primary\">Logistic Report Upload Panel</mat-toolbar></div>\n<br><br>\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n\n"
+module.exports = "<div class=\"border\"><mat-toolbar color=\"primary\">Logistic Report Upload Panel</mat-toolbar></div>\r\n<br><br>\r\n<div class=\"container\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -356,7 +400,7 @@ module.exports = "\r\n.custom-file-upload {\r\n    border: 2px solid  #1A237E;\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card> \n  <div class=\"center\">\n    <form id = \"formNewCSV\" name =\"formNewCSV\" #CSVData = \"ngForm\" >\n        <label class=\"custom-file-upload\"> Click to upload the XLSX file\n        <input id=\"file\" name=\"file\" type=\"file\" (change)=\"addCSV();CSVData.reset() \" placeholder=\"Upload a file...\" multiple ngModel/>\n      </label>\n      <br><br>\n      </form>\n    </div>\n\n</mat-card>"
+module.exports = "<mat-card> \r\n  <div class=\"center\">\r\n    <form id = \"formNewCSV\" name =\"formNewCSV\" #CSVData = \"ngForm\" >\r\n        <label class=\"custom-file-upload\"> Click to upload the XLSX file\r\n        <input id=\"file\" name=\"file\" type=\"file\" (change)=\"addCSV();CSVData.reset() \" placeholder=\"Upload a file...\" multiple ngModel/>\r\n      </label>\r\n      <br><br>\r\n      </form>\r\n    </div>\r\n\r\n</mat-card>"
 
 /***/ }),
 
@@ -440,11 +484,12 @@ var UploadFileComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdddataService", function() { return AdddataService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs_Observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/Observable */ "./node_modules/rxjs-compat/_esm5/Observable.js");
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
-/* harmony import */ var _node_modules_angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../node_modules/@angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs_Observable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/Observable */ "./node_modules/rxjs-compat/_esm5/Observable.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+/* harmony import */ var _node_modules_angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../node_modules/@angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -460,24 +505,71 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var AdddataService = /** @class */ (function () {
     function AdddataService(http) {
         this.http = http;
     }
     AdddataService.prototype.sendCSV = function (formdata) {
-        var _url = "/additems/xlsx_file_upload";
+        var _url = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].server_url + "/additems/xlsx_file_upload";
         return this.http.post(_url, formdata)
             .catch(this._errorHandler);
     };
     AdddataService.prototype._errorHandler = function (error) {
         console.error('Error occured: ' + error);
-        return rxjs_Observable__WEBPACK_IMPORTED_MODULE_1__["Observable"].throw(error || 'some error on server occured');
+        return rxjs_Observable__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error || 'some error on server occured');
     };
     AdddataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_node_modules_angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]])
+        __metadata("design:paramtypes", [_node_modules_angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]])
     ], AdddataService);
     return AdddataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/getdata.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/getdata.service.ts ***!
+  \*********************************************/
+/*! exports provided: GetdataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetdataService", function() { return GetdataService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var GetdataService = /** @class */ (function () {
+    function GetdataService(http) {
+        this.http = http;
+    }
+    // Getdata(){
+    //   return this.http.get('http://192.168.1.155:3080/fetchs/read_xls_file');
+    // }
+    GetdataService.prototype.getCSVData = function (url) {
+        return this.http.get(url);
+    };
+    GetdataService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
+    ], GetdataService);
+    return GetdataService;
 }());
 
 
@@ -498,7 +590,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    server_url: 'http://192.168.1.155:3080'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -544,7 +637,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Development\Logistic_report_extract\logistic-report-angular\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Development\logistics_report\logistic-report-angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })
