@@ -1,3 +1,42 @@
-<p>
-  data-show works!
-</p>
+<img src="/assets/backgroundlogistic.png" class="backgraud-photo ">
+<img src="assets/logo-final-A.png" class="logo-class"/>
+<div class="containers">
+  <div class="row">
+    <table  class="class-for-table">
+      <th class="backgraund">Supplier</th>
+      <th class="backgraund-two">Invoice No.</th>
+      <th class="backgraund">Inv. Amount</th>
+      <th class="backgraund-two"> <img src=''>swift</th>
+      <th class="backgraund">Supplier Readiness</th>
+      <th class="backgraund-two">Legalization</th>
+      <th class="backgraund">Pick Up</th>
+      <th class="backgraund-two">Type</th>
+      <th class="backgraund">Dep.</th>
+      <th class="backgraund-two">ETA</th>
+      <th class="backgraund">Bank</th>
+      <th class="backgraund-two">Clearance</th>
+      <th class="backgraund">NTRA</th>
+      <th class="backgraund-two">Nat. Security</th>
+      <th class="backgraund">Gate in </th>
+    
+      <tr *ngFor = "let item of this.row_altered ">
+        <td class="colom-style">{{item[0]}}</td>
+        <td class="colom-style">{{item[1]}}</td>
+        <td class="colom-style">{{item[2]}} {{item[3]}}</td>
+        <td class="colom-style">{{item[4]}}</td>
+        <td class="colom-style">{{item[5]}}</td>
+        <td class="colom-style">{{item[6]}}</td>
+        <td class="colom-style">{{item[7]}}</td>
+        <td class="colom-style">{{item[8]}}</td>
+        <td class="colom-style">{{item[9]}}</td>
+        <td class="colom-style">{{item[10]}}</td>
+        <td class="colom-style">{{item[11]}}</td>
+        <td class="colom-style">{{item[12]}}</td>
+        <td class="colom-style">{{item[13]}}</td>
+        <td class="colom-style">{{item[14]}}</td>
+        <td class="colom-style">{{item[15]}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

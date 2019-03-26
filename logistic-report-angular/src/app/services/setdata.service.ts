@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
-
-
-import {Observable} from 'rxjs/Observable'
+import {environment } from '../../environments/environment';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -15,7 +14,7 @@ export class SetdataService {
 
   SetGalleryDescription(gallery_id:string,title:string,description:string){
 
-    let _url:string = "/sets/set_desc_title/";
+    let _url:string = environment.server_url+"/sets/set_desc_title/";
     const data = '{"id": "' + gallery_id + '","title": "' + title + '", "description": "' + description + '"}';
     //console.log(data);
 

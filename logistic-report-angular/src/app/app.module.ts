@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdddataService } from './services/adddata.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { GetdataService } from './services/getdata.service';
 
 
 @NgModule({
@@ -35,9 +36,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatSnackBarModule,
     HttpClientModule,
+    HttpModule,
     BrowserAnimationsModule
   ],
-  providers: [AdddataService],
+  providers: [AdddataService,GetdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
