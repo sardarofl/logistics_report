@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class GetdataService {
@@ -16,5 +17,14 @@ export class GetdataService {
       return this.http.get(url)
     }
 
+    getData(url){
+      return this.http.get(url)
+      .map(res =>  res.json())   
+    }
+
+    getShipmentById(url, id){
+      return this.http.get(url,id)
+      .map(res =>  res.json())   
+    }
 
 }

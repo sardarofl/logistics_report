@@ -20,4 +20,14 @@ function verifyToken(req,res,next){
 		res.sendStatus(403);
 	}
 }
+
+//delete category
+router.delete('/delete_shipment/:id',function(req,res){
+	var id = req.params.id;
+	var res = res;
+	Delete.DeleteFromShipments(id,res, function(err,callback){
+		if(err) return res.json(err);
+				 res.json(callback);
+     });
+});
 module.exports = router;

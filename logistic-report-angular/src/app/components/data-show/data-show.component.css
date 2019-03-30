@@ -8,30 +8,54 @@
     padding-top: 20px;
 }
 .backgraund{
-    border: 1px solid #dee2e6;
-    background-color: #bd9921;
+    border: none;
+    background-color: #FB4250;
     color: #ffffff;
     text-align: center;
 
 }
 .logo-class{
-   width: 15%;
+   /* width: 15%; */
+   max-height:60px;
    margin-left: 20px;
    margin-top: 20px; 
+   padding:10px;
+}
+.circlearoundimage{
+    background-color:white;
+    border-radius:30px;
+ 
 }
 .backgraund-two{
-    border: 1px solid #dee2e6;
-    background-color: #2e3e9b;
+    border: none;
+    background-color: #FB4250;
     color: #ffffff;
     text-align: center;
 }
 .colom-style{
-    border: 1px solid #dee2e6;
+    border: none;
+    border-radius: 0;
     padding: 20px;
     text-align: center;
-    color: #ffffff;
+    color: #000000 ;
+    background-color: #ffffff;
 }
 
+th{
+    border-radius: 0;
+ 
+}
+
+.top-right{
+    border-top-right-radius: 10px;
+}
+.top-left{
+    border-top-left-radius: 10px;
+}
+table{
+    font-family: 'Montserrat', sans-serif;
+
+}
 
 .backgraud-photo{
     z-index: -100;
@@ -43,4 +67,17 @@
    padding-left: 10px;
    padding-right: 10px; 
    margin-top: 10px;
+   font-size:1vw;
+   border-radius:4;
+}
+
+.containers{
+    padding:10px;
+}
+
+.totals{
+    color:white;
+    position:fixed;
+    right:100px;
+    top:8px;
 }

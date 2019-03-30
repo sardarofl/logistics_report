@@ -7,16 +7,16 @@ const config = require("./config/database")
 const passport = require('passport');
 
 
-// //connect to database
-// mongoose.connect(config.database);
-// //on connection
-// mongoose.connection.on('connected', () => {
-//   console.log('connected to database '+config.database);
-// });
-// //on error
-// mongoose.connection.on('error', () => {
-//   console.log('Database Erro '+config.database);
-// });
+//connect to database
+mongoose.connect(config.database);
+//on connection
+mongoose.connection.on('connected', () => {
+  console.log('connected to database '+config.database);
+});
+//on error
+mongoose.connection.on('error', () => {
+  console.log('Database Erro '+config.database);
+});
 
 
 

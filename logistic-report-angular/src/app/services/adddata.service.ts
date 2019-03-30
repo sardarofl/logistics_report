@@ -21,6 +21,11 @@ export class AdddataService {
     .catch(this._errorHandler);
   }
 
+  addData(url,data){
+    return this.http.post(url,data)
+    .catch(this._errorHandler);
+  }
+
 
    _errorHandler(error: Response){
      console.error('Error occured: ' +error);

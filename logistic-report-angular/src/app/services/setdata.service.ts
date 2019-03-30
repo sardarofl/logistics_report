@@ -23,6 +23,12 @@ export class SetdataService {
 
   }
 
+  SetData(url, data){
+
+    return this.http.post(url,data).catch(this._errorHandler);
+
+  }
+
   nonono(formdata:any){
      let _url:string = "/adds/add_category";
      return this.http.post(_url,formdata)

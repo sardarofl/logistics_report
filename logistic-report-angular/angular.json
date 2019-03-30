@@ -24,10 +24,20 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/materialize-css/dist/css/materialize.css"
+              "node_modules/materialize-css/dist/css/materialize.css",
+              "node_modules/jquery-datetimepicker/jquery.datetimepicker.css",
+              "node_modules/fullcalendar/fullcalendar.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.js",
               "node_modules/hammerjs/hammer.js",
+              "node_modules/moment/moment.js",
+              "node_modules/fullcalendar/lib/jquery.min.js",
+              "node_modules/fullcalendar/lib/moment.min.js",
+              "node_modules/fullcalendar/fullcalendar.js",
+              "node_modules/jquery-datetimepicker/jquery.datetimepicker.js",
+              "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js",
+              "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js",
               "node_modules/materialize-css/dist/js/materialize.js"]
           },
           "configurations": {

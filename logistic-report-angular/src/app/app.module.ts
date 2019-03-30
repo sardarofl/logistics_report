@@ -19,6 +19,9 @@ import { AdddataService } from './services/adddata.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { GetdataService } from './services/getdata.service';
+import { BeLogisticAddDataComponent } from './components/be-logistic-add-data/be-logistic-add-data.component';
+import { SetdataService } from './services/setdata.service';
+import { DeletedataService } from './services/deletedata.service';
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { GetdataService } from './services/getdata.service';
     AppComponent,
     MainBackComponent,
     UploadFileComponent,
-    DataShowComponent
+    DataShowComponent,
+    BeLogisticAddDataComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ import { GetdataService } from './services/getdata.service';
     HttpModule,
     BrowserAnimationsModule
   ],
-  providers: [AdddataService,GetdataService],
+  providers: [AdddataService,GetdataService,SetdataService,DeletedataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

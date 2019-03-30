@@ -1,4 +1,4 @@
 module.exports = {
-  database:'mongodb://paymeuser:paymepass1@ds349065.mlab.com:49065/paymeapp',
+  database:'mongodb://127.0.0.1:27017/reportdb',
   secret: 'yoursecret'
 }

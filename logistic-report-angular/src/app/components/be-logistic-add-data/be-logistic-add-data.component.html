@@ -1,0 +1,126 @@
+
+  <h5>Add Shipment</h5>
+  <table>
+      <tr>
+          <th>Supplier</th>
+          <th>Invoice No.</th>
+          <th>Inv. Amount</th>
+          <th>Currency</th>
+          <th>Swift</th>
+          <th>Supplier Readiness</th>
+          <th>Legalization</th>
+          <th>Pick Up</th>
+          <th>Type</th>
+      </tr>
+    <tr>
+        <td><input [(ngModel)]="this.supplier" placeholder="supplier" type="text"></td>
+        <td><input [(ngModel)]="this.invoiceno" placeholder="invoice no." type="text"></td>
+        <td><input [(ngModel)]="this.invamount" placeholder="inv. amount" type="text"></td>
+        <td>  
+            <select [(ngModel)]="this.currency" (ngModelChange)="showTick($event)" style="display: block;min-width:70px; font-size:0.8vw;">
+            <option value="EGP" >EGP</option>
+            <option value="USD" >USD</option>
+            <option value="EUR" >EUR</option>
+        </select>
+        </td>
+        <td><input [(ngModel)]="this.swift" placeholder="swift" type="text"></td>
+        <td><input [(ngModel)]="this.supplierreadiness" placeholder="supplier readiness" type="text"></td>
+        <td><input [(ngModel)]="this.legalization" placeholder="legalization" type="text"></td>
+        <td><input [(ngModel)]="this.pickup" placeholder="pickup" type="text"></td>
+        <td> <select [(ngModel)]="this.shippingtype" style="display: block;min-width:70px; font-size:0.8vw;">
+            <option value="1" >Ship</option>
+            <option value="2" >Flight</option>
+            <option value="3" >DHL</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+        <th>Departure</th>
+        <th>Eta</th>
+        <th>Bank</th>
+        <th>Clearance</th>
+        <th>NTRA</th>
+        <th>National security</th>
+        <th>Gate In</th>
+    </tr>
+    <tr>
+        <td><input id="shipping_dep_date" class="date-inputs-start" [(ngModel)]="this.shippingdep" placeholder="shipping dep" type="text"></td>
+        <td><input id="shipping_eta_date" class="date-inputs-start" [(ngModel)]="this.shippingeta" placeholder="shipping eta" type="text"></td>
+        <td><input [(ngModel)]="this.bank" placeholder="bank" type="text"></td>
+        <td><input [(ngModel)]="this.clearance" placeholder="clearance" type="text"></td>
+        <td><input [(ngModel)]="this.ntra" placeholder="ntra" type="text"></td>
+        <td><input [(ngModel)]="this.nationalsecurity" placeholder="nationalsecurity" type="text"></td>
+        <td><input id="gatein" class="date-inputs-start" [(ngModel)]="this.gatein" placeholder="gatein" type="text"></td>
+    </tr>
+
+  
+  </table>
+
+<div class="row">
+  <a class="btn indigo darken-4 right" (click)="addData()"><i class="material-icons">add</i></a>
+</div>
+
+  <div class="divider"></div>
+<mat-card>
+    <h5>Edit Shipment</h5>
+    <table class="small_font stripped">
+      <th>Supplier</th>
+      <th>Invoice No.</th>
+      <th>Inv. Amount</th>
+      <th>Currency</th>
+      <th>Swift</th>
+      <th>Supplier Readiness</th>
+      <th>Legalization</th>
+      <th>Pick Up</th>
+      <th>Type</th>
+      <th>Departure</th>
+      <th>Eta</th>
+      <th>Bank</th>
+      <th>Clearance</th>
+      <th>NTRA</th>
+      <th>National security</th>
+      <th>Gate In</th>
+      <th>Delete</th>
+  
+      <tr *ngFor="let item of this.supplies_array; let i = index">
+        <td><input [(ngModel)]="item.supplier" (ngModelChange)="showTick($event)" style="min-width: 120px;" placeholder="supplier" type="text"></td>
+        <td><input [(ngModel)]="item.invoiceno" (ngModelChange)="showTick($event)" style="min-width: 120px;" placeholder="invoice no." type="text"></td>
+        <td><input [(ngModel)]="item.invamount" (ngModelChange)="showTick($event)" style="min-width: 120px;" placeholder="inv. amount" type="text"></td>
+        <td>    
+          <select [(ngModel)]="item.currency" (ngModelChange)="showTick($event)" style="display: block;min-width:70px; font-size:0.8vw;">
+            <option value="EGP" >EGP</option>
+            <option value="USD" >USD</option>
+            <option value="EUR" >EUR</option>
+        </select>
+      </td>
+        <td><input [(ngModel)]="item.swift" (ngModelChange)="showTick($event)" style="min-width: 120px;" placeholder="swift" type="text"></td>
+        <td><input [(ngModel)]="item.supplierreadiness" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="supplier readiness" type="text"></td>
+        <td><input [(ngModel)]="item.legalization" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="legalization" type="text"></td>
+        <td><input [(ngModel)]="item.pickup" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="pickup" type="text"></td>
+        <td>
+          <!-- <input [(ngModel)]="item.shippingtype" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="shipping type" type="text"> -->
+          <select [(ngModel)]="item.shippingtype" (ngModelChange)="showTick($event)" style="display: block;min-width:70px; font-size:0.8vw;">
+              <option value="1" >Ship</option>
+              <option value="2" >Flight</option>
+              <option value="3" >DHL</option>
+          </select>
+        </td>
+        <td><input [(ngModel)]="item.shippingdep" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="shipping dep" type="text"></td>
+        <td><input [(ngModel)]="item.shippingeta"(ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="shipping eta" type="text"></td>
+        <td><input [(ngModel)]="item.bank" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="bank" type="text"></td>
+        <td><input [(ngModel)]="item.clearance" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="clearance" type="text"></td>
+        <td><input [(ngModel)]="item.ntra" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="ntra" type="text"></td>
+        <td><input [(ngModel)]="item.nationalsecurity" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="nationalsecurity" type="text"></td>
+        <td><input [(ngModel)]="item.gatein" (ngModelChange)="showTick($event)" style="min-width: 120px;"  placeholder="gatein" type="text"></td>
+        <td>  <a class="btn red" (click)="deleteShipment(item)"><i class="material-icons">delete</i></a></td>
+        <!-- <td><a class="btn-floating btn-small green" (click)="setData(item)"><i class="material-icons">check</i></a></td> -->
+      </tr>
+    </table>
+  <br>
+    
+  <div class="row">
+    <button [disabled]="!this.ShowTick" class="btn green right" (click)="updateAll()"><i class="material-icons">check</i></button>
+  </div>
+</mat-card>
+
+ 

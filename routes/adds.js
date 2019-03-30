@@ -5,7 +5,6 @@ const Add = require('../models/add');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
-
 function verifyToken(req,res,next){
 	
 	const bearerHeader = req.headers['authorization'];
@@ -36,6 +35,18 @@ router.post('/xlsx_file_upload',function(req,res){
 	  });
 });
 
+router.post('/add_shipment',function(req,res){
+	var req = req;
+	var res = res;
+	console.log("adding shipment")
+	  Add.AddToShipments(req,res, (err, category) =>{
+	    if(err){
+	     res.json({success:false, msg:'Failed to add'});
+	    }else{
+	     res.json({success:true, msg:'add'});
+	    }
+	  });
+});
 
 
 module.exports = router;

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import{GetdataService } from '../../services/getdata.service';
 import {  VERSION } from '@angular/core';
+import {environment } from '../../../environments/environment'
+import * as Moment from "../../../../node_modules/moment/moment.js"
+
 
 @Component({
   selector: 'app-data-show',
@@ -13,73 +16,77 @@ export class DataShowComponent implements OnInit {
     private getdataservice :GetdataService
   ) { }
 
-  row;
+  // alldata;
+  alldata:Alldata[];
   total_usd;
   total_euro;
-  row_altered=[];
   ngOnInit() {
-    this.total_usd =0;
-    this.total_euro =0;
-    this.getdataservice.getCSVData('http://192.168.1.155:3080/fetchs/read_xls_file').subscribe( (dataFromServer:any) =>{  
-     let bodyJson =JSON.parse(dataFromServer._body )
+    this.loadData();
+
+      setInterval(()=>{this.loadData() }, 10000);
+  }
+
+  loadData(){
     
-     this.row = bodyJson[0].data
-     console.log( this.row);
+    this.getdataservice.getData(environment.server_url+'/fetchs/fetch_logistics').subscribe( (data) =>{  
+      this.total_usd =0;
+      this.total_euro =0;
+     this.alldata = data
 
-     for(let i=4; i<=this.row.length; i++){
-      //  console.log(this.row[i][0])
-      if(this.row[i][0] == null){
-        break;
-      }else{
-        this.row_altered.push(this.row[i])
-       // console.log(bodyJson[0].data[i][2])
-        if(bodyJson[0].data[i][3] == 'USD')
+     for(let i=0; i<data.length; i++){
+
+
+        if(data[i].currency == 'EUR')
         {
-          this.total_euro = bodyJson[0].data[i][2] +this.total_euro;
+          this.total_euro = parseInt(data[i].invamount) +this.total_euro;
         }
-        if(bodyJson[0].data[i][3] == 'EUR')
+        if(data[i].currency == 'USD')
         {
-          this.total_usd = bodyJson[0].data[i][2] +this.total_usd;
+          this.total_usd = parseInt(data[i].invamount)  +this.total_usd;
         }
-        
-       
-      }
+        // console.log(data[i].shippingeta)
+        // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
+        // console.log("Now: " ,Moment(Date()).format('X'))
 
-      // for(let i=4; i<=this.row.length; i++){
-      //   if(this.row[i][])
-      // }
-
-   
-
+        this.alldata[i].background="black";
+        if((parseInt(Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+        {
+          // console.log("danger")
+          this.alldata[i].background= "red"
+        }
+        if((parseInt(Moment(data[i].shippingdep,'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+        {
+          // console.log("danger")
+          this.alldata[i].background= "green"
+        }
+ 
      }
-     console.log(this.total_euro);
-     console.log(this.total_usd);
-   //  console.log(this.total);
-   
-    //  if (this.value){
-    //  }
-    //  for(let i=5;i>15;i++){
-    //   console.log(bodyJson[i].data[i]);
-    // }
-    
+
+
+
     })
   }
- // version = VERSION.full;
-  
-  //formatsDateTest: string[] = [
-    //'dd/MM/yyyy',
-    //'dd/MM/yyyy hh:mm:ss',
-    //'dd-MM-yyyy',
-    //'dd-MM-yyyy HH:mm:ss',
-    //'MM/dd/yyyy',
-    //'MM/dd/yyyy hh:mm:ss',
-    //'yyyy/MM/dd',
-    //'yyyy/MM/dd HH:mm:ss',
-    //'dd/MM/yy',
-    //'dd/MM/yy hh:mm:ss',
-    //];
-  
-  // dateNow : Date = new Date();
-  // dateNowISO = this.dateNow.toISOString();
-  // dateNowMilliseconds = this.dateNow.getTime();
+
 }
+
+interface Alldata{
+  _id:number,
+  supplier:string,
+  invoiceno:string,
+  invamount:string,
+  currency:string,
+  swift:Date,
+  supplierreadiness:string,
+  legalization:string,
+  pickup:Date,
+  shippingtype:string,
+  shippingdep:string,
+  shippingeta:string,
+  bank:string,
+  clearance:string,
+  ntra:string,
+  nationalsecurity:string,
+  gatein:string,
+  background:string
+}
+

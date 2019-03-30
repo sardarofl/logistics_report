@@ -1,7 +1,7 @@
 const config = require('../config/database');
 const mysql = require('mysql');
 const mongoose = require('mongoose');
-const Posts_schema = require('./posts_schemas');
+const logistic_schema = require('./logistic_schemas');
 const Fetch = require('../models/fetch');
 var xlsx = require('node-xlsx').default;
 
@@ -13,6 +13,14 @@ const Fetch_Items={
     const workSheetsFromFile = xlsx.parse('./report/logisticreport.xlsx');
     console.log(workSheetsFromFile);
     return(workSheetsFromFile);
+  },
+
+  fetch_logistic : function(callback){
+    logistic_schema.find(callback);
+  },
+
+  fetch_shipment_byID : function(id,callback){
+    logistic_schema.findOne(id, callback);
   }
 };
 

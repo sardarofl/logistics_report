@@ -41,5 +41,19 @@ router.get('/read_xls_file',function(req,res){
 });
 
 
+//fetch
+router.get('/fetch_logistics',function(req,res){
+	Fetch.fetch_logistic(function(err,callback){
+		if(err) return res.json({success:false, msg:'Failed to find logistics'});
+				 res.json(callback);
+     });
+});
+router.get('/fetch_shipment_byId',function(req,res){
+	Fetch.fetch_shipment_byID(function(err,callback){
+		if(err) return res.json({success:false, msg:'Failed to find logistics'});
+				 res.json(callback);
+     });
+});
+
 
 module.exports = router;

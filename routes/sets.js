@@ -20,4 +20,22 @@ function verifyToken(req,res,next){
 	}
 }
 
+
+
+//set meeting data
+router.post('/set_logisticdata',function(req,res){
+	var req = req;
+	var res = res;
+
+	  Set.setLogisticsData(req,res, (err, category) =>{
+	    if(err){
+	     res.json({success:false, msg:'Failed to set logistic data'});
+	    }else{
+	     res.json({success:true, msg:'Data Set'});
+	    }
+	  });
+});
+
+
+
 module.exports = router;
