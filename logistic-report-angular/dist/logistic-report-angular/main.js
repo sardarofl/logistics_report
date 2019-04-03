@@ -825,7 +825,6 @@ var DataShowComponent = /** @class */ (function () {
             //this.alldata = data;
             _this.alldata = [];
             for (var i = 4; i < data[0].data.length; i++) {
-                // console.log(data[0].data[i])
                 if (data[0].data[i][0] == null) {
                     break;
                 }
@@ -841,6 +840,34 @@ var DataShowComponent = /** @class */ (function () {
                 if (data[0].data[i][7] != 'Done' && data[0].data[i][7] != null) {
                     data[0].data[i][7] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
                 }
+                data[0].data[i].background = "black";
+                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][10], 'DD/MM/YYYY').format('X')) - (86400 * 3)) < parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
+                    console.log("danger");
+                    data[0].data[i].background = "red";
+                }
+                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][11], 'DD/MM/YYYY').format('X'))) > parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
+                    console.log("danger");
+                    data[0].data[i].background = "green";
+                }
+            }
+            console.log(data[0]);
+            for (var i = 4; i < data[0].data.length; i++) {
+                // console.log(data[0].data[i])
+                if (data[0].data[i][0] == null) {
+                    break;
+                }
+                //  if(data[0].data[i][9] != null ){
+                //  data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
+                // }
+                // if(data[0].data[i][10] != null ){
+                //  data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
+                // }
+                // if(data[0].data[i][15] != null ){
+                //  data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+                // }
+                // if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
+                //   data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+                // }
                 //  if(data[0].data[i][])
                 _this.alldata.push(data[0].data[i]);
                 if (data[0].data[i][3] == 'EUR') {
@@ -855,18 +882,8 @@ var DataShowComponent = /** @class */ (function () {
                 // // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
                 // // console.log("Now: " ,Moment(Date()).format('X'))
                 // this.alldata[i].background="black";
-                // if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
-                // {
-                //   // console.log("danger")
-                //   this.alldata[i].background= "red"
-                // }
-                // if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
-                // {
-                //   // console.log("danger")
-                //   this.alldata[i].background= "green"
-                // }
             }
-            //  console.log(this.alldata)
+            console.log(_this.alldata);
         });
     };
     DataShowComponent.prototype.ExcelDateToJSDate = function (serial) {

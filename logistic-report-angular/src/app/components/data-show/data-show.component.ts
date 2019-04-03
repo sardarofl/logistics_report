@@ -35,29 +35,67 @@ export class DataShowComponent implements OnInit {
       //console.log(data)
       //this.alldata = data;
       this.alldata =[];
+
+      for(let i=4; i<data[0].data.length; i++){
+        if(data[0].data[i][0] == null)
+        {
+          break;
+        }
+        if(data[0].data[i][9] != null ){
+        data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
+       }
+   
+       if(data[0].data[i][10] != null ){
+        data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
+       }
+   
+       if(data[0].data[i][15] != null ){
+         
+        data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+       }
+       if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
+        data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+      }
+        data[0].data[i].background = "black"
+
+
+        if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+        {
+          console.log("danger")
+          data[0].data[i].background= "red"
+        }
+        if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+        {
+          console.log("danger")
+          data[0].data[i].background= "green"
+        }
+ 
+      }
+      console.log(data[0])
+
      for(let i=4; i<data[0].data.length; i++){
      // console.log(data[0].data[i])
      if(data[0].data[i][0] == null)
      {
        break;
      }
-     if(data[0].data[i][9] != null ){
-     data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
-    }
+    //  if(data[0].data[i][9] != null ){
+    //  data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
+    // }
 
-    if(data[0].data[i][10] != null ){
-     data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
-    }
+    // if(data[0].data[i][10] != null ){
+    //  data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
+    // }
 
-    if(data[0].data[i][15] != null ){
+    // if(data[0].data[i][15] != null ){
       
-     data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
-    }
+    //  data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+    // }
 
 
-    if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
-      data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
-    }
+    // if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
+    //   data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+    // }
     //  if(data[0].data[i][])
 
       this.alldata.push(data[0].data[i]);
@@ -79,19 +117,9 @@ export class DataShowComponent implements OnInit {
         // // console.log("Now: " ,Moment(Date()).format('X'))
 
         // this.alldata[i].background="black";
-        // if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
-        // {
-        //   // console.log("danger")
-        //   this.alldata[i].background= "red"
-        // }
-        // if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
-        // {
-        //   // console.log("danger")
-        //   this.alldata[i].background= "green"
-        // }
- 
+  
      }
-    //  console.log(this.alldata)
+     console.log(this.alldata)
 
 
 
