@@ -762,7 +762,7 @@ var BeLogisticAddDataComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    min-width:98%;\r\n    max-width:98%;\r\n    font-size: 1.1vw;\r\n    padding-top: 20px;\r\n}\r\n.backgraund{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n\r\n}\r\n.logo-class{\r\n   /* width: 15%; */\r\n   max-height:60px;\r\n   margin-left: 20px;\r\n   margin-top: 20px; \r\n   padding:10px;\r\n}\r\n.circlearoundimage{\r\n    background-color:white;\r\n    border-radius:30px;\r\n \r\n}\r\n.backgraund-two{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n.colom-style{\r\n    border: none;\r\n    border-radius: 0;\r\n    padding: 20px;\r\n    text-align: center;\r\n    color: #000000 ;\r\n    background-color: #ffffff;\r\n}\r\nth{\r\n    border-radius: 0;\r\n \r\n}\r\n.top-right{\r\n    border-top-right-radius: 10px;\r\n}\r\n.top-left{\r\n    border-top-left-radius: 10px;\r\n}\r\ntable{\r\n    font-family: 'Montserrat', sans-serif;\r\n\r\n}\r\n.backgraud-photo{\r\n    z-index: -100;\r\n    position: fixed;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.class-for-table{\r\n   padding-left: 10px;\r\n   padding-right: 10px; \r\n   margin-top: 10px;\r\n   font-size:1vw;\r\n   border-radius:4;\r\n}\r\n.containers{\r\n    padding:10px;\r\n}\r\n.totals{\r\n    color:white;\r\n    position:fixed;\r\n    right:100px;\r\n    top:8px;\r\n}\r\n"
+module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    min-width:98%;\r\n    max-width:98%;\r\n    font-size: 1.1vw;\r\n    padding-top: 20px;\r\n}\r\n.backgraund{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n\r\n}\r\n.logo-class{\r\n   /* width: 15%; */\r\n   max-height:60px;\r\n   margin-left: 20px;\r\n   margin-top: 20px; \r\n   padding:10px;\r\n}\r\n.circlearoundimage{\r\n    background-color:white;\r\n    border-radius:30px;\r\n \r\n}\r\n.backgraund-two{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n.colom-style{\r\n    border: none;\r\n    border-radius: 0;\r\n    padding: 20px;\r\n    text-align: center;\r\n    color: #000000 ;\r\n    background-color: #ffffff;\r\n}\r\nth{\r\n    border-radius: 0;\r\n \r\n}\r\n.top-right{\r\n    border-top-right-radius: 10px;\r\n}\r\n.top-left{\r\n    border-top-left-radius: 10px;\r\n}\r\ntable{\r\n    font-family: 'Montserrat', sans-serif;\r\n\r\n}\r\n.backgraud-photo{\r\n    z-index: -100;\r\n    position: fixed;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.class-for-table{\r\n   padding-left: 10px;\r\n   padding-right: 10px; \r\n   margin-top: 10px;\r\n   font-size:0.6vw;\r\n   border-radius:4;\r\n}\r\n.containers{\r\n    padding:10px;\r\n}\r\n.totals{\r\n    color:white;\r\n    position:fixed;\r\n    right:250px;\r\n    top:8px;\r\n}\r\n"
 
 /***/ }),
 
@@ -773,7 +773,7 @@ module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<img src=\"/assets/backgroundlogistic.png\" class=\"backgraud-photo \">\r\n<div class=\"\"><img src=\"assets/modified ati logo.png\" class=\"logo-class circlearoundimage\"/></div>\r\n<div class=\"containers\">\r\n  <div class=\"row\">\r\n    <table  class=\"class-for-table\">\r\n      <th class=\"backgraund top-left\">Supplier</th>\r\n      <th class=\"backgraund-two\">Invoice No.</th>\r\n      <th class=\"backgraund\">Inv. Amount</th>\r\n      <th class=\"backgraund-two\"> <img src=''>swift</th>\r\n      <th class=\"backgraund\">Supplier Readiness</th>\r\n      <th class=\"backgraund-two\">Legalization</th>\r\n      <th class=\"backgraund\">Pick Up</th>\r\n      <th class=\"backgraund-two\">Type</th>\r\n      <th class=\"backgraund\">Dep.</th>\r\n      <th class=\"backgraund-two\">ETA</th>\r\n      <th class=\"backgraund\">Bank</th>\r\n      <th class=\"backgraund-two\">Clearance</th>\r\n      <th class=\"backgraund\">NTRA</th>\r\n      <th class=\"backgraund-two\">Nat. Security</th>\r\n      <th class=\"backgraund top-right\">Gate in </th>\r\n    \r\n      <tr *ngFor = \"let item of this.alldata \" >\r\n        <td [style.color]=\"item.background\"  class=\"colom-style\">{{item.supplier}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.invoiceno}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.invamount| currency}} {{item.currency}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.swift}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.supplierreadiness}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.legalization}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.pickup}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\"><img *ngIf=\"item.shippingtype === '1'\" style=\"max-height:20px;\" src=\"/assets/ship.png\"><img *ngIf=\"item.shippingtype === '2'\" style=\"max-height:20px;\" src=\"/assets/flight.png\"><img style=\"max-height:15px;\" *ngIf=\"item.shippingtype === '3'\" src=\"/assets/dhl.png\"></td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.shippingdep}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.shippingeta}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.bank}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.clearance}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.ntra}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.nationalsecurity}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item.gatein}}</td>\r\n      </tr>\r\n    </table>\r\n\r\n  </div>\r\n</div>\r\n\r\n<div class=\"totals\">\r\n  <span><h4>Total USD: {{total_usd}}, Total EUR: {{total_euro}}</h4></span>\r\n</div>"
+module.exports = "<img src=\"/assets/backgroundlogistic.png\" class=\"backgraud-photo \">\r\n<div class=\"\"><img src=\"assets/modified ati logo.png\" class=\"logo-class circlearoundimage\"/></div>\r\n<div class=\"containers\">\r\n  <div class=\"row\">\r\n    <table  class=\"class-for-table\">\r\n      <th class=\"backgraund top-left\">Supplier</th>\r\n      <th class=\"backgraund-two\">Invoice No.</th>\r\n      <th class=\"backgraund\">Inv. Amount</th>\r\n      <th class=\"backgraund-two\"> <img src=''>swift</th>\r\n      <th class=\"backgraund\">Supplier Readiness</th>\r\n      <th class=\"backgraund-two\">Legalization</th>\r\n      <th class=\"backgraund\">Pick Up</th>\r\n      <th class=\"backgraund-two\">Type</th>\r\n      <th class=\"backgraund\">Dep.</th>\r\n      <th class=\"backgraund-two\">ETA</th>\r\n      <th class=\"backgraund\">Bank</th>\r\n      <th class=\"backgraund-two\">Clearance</th>\r\n      <th class=\"backgraund\">NTRA</th>\r\n      <th class=\"backgraund-two\">Nat. Security</th>\r\n      <th class=\"backgraund top-right\">Gate in </th>\r\n    \r\n      <tr *ngFor = \"let item of this.alldata \" >\r\n        <td [style.color]=\"item.background\"  class=\"colom-style\">{{item[0]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[1]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[2]| currency}} {{item[3]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[4]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[5]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[6]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[7]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\"><img *ngIf=\"item[8] === 'ship'\" style=\"max-height:20px;\" src=\"/assets/ship.png\"><img *ngIf=\"item[8]  === 'air'\" style=\"max-height:20px;\" src=\"/assets/flight.png\"><img style=\"max-height:15px;\" *ngIf=\"item[8]  === 'dhl'\" src=\"/assets/dhl.png\"></td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[9]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[10]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[11]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[12]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[13]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[14]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[15]}}</td>\r\n      </tr>\r\n    </table>\r\n\r\n  </div>\r\n</div>\r\n\r\n<div class=\"totals\">\r\n  <span><h4>Total USD: {{total_usd}}, Total EUR: {{total_euro}}</h4></span>\r\n</div>"
 
 /***/ }),
 
@@ -808,6 +808,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var DataShowComponent = /** @class */ (function () {
     function DataShowComponent(getdataservice) {
         this.getdataservice = getdataservice;
+        // alldata;
+        this.alldata = [];
     }
     DataShowComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -816,31 +818,68 @@ var DataShowComponent = /** @class */ (function () {
     };
     DataShowComponent.prototype.loadData = function () {
         var _this = this;
-        this.getdataservice.getData(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].server_url + '/fetchs/fetch_logistics').subscribe(function (data) {
+        this.getdataservice.getCSVData(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].server_url + '/fetchs/read_xls_file').subscribe(function (data) {
             _this.total_usd = 0;
             _this.total_euro = 0;
-            _this.alldata = data;
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].currency == 'EUR') {
-                    _this.total_euro = parseInt(data[i].invamount) + _this.total_euro;
+            //console.log(data)
+            //this.alldata = data;
+            _this.alldata = [];
+            for (var i = 4; i < data[0].data.length; i++) {
+                // console.log(data[0].data[i])
+                if (data[0].data[i][0] == null) {
+                    break;
                 }
-                if (data[i].currency == 'USD') {
-                    _this.total_usd = parseInt(data[i].invamount) + _this.total_usd;
+                if (data[0].data[i][9] != null) {
+                    data[0].data[i][9] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
                 }
-                // console.log(data[i].shippingeta)
-                // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
-                // console.log("Now: " ,Moment(Date()).format('X'))
-                _this.alldata[i].background = "black";
-                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[i].shippingeta, 'DD/MM/YYYY').format('X')) - (86400 * 3)) < parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
-                    // console.log("danger")
-                    _this.alldata[i].background = "red";
+                if (data[0].data[i][10] != null) {
+                    data[0].data[i][10] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
                 }
-                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[i].shippingdep, 'DD/MM/YYYY').format('X'))) > parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
-                    // console.log("danger")
-                    _this.alldata[i].background = "green";
+                if (data[0].data[i][15] != null) {
+                    data[0].data[i][15] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
                 }
+                if (data[0].data[i][7] != 'Done' && data[0].data[i][7] != null) {
+                    data[0].data[i][7] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+                }
+                //  if(data[0].data[i][])
+                _this.alldata.push(data[0].data[i]);
+                if (data[0].data[i][3] == 'EUR') {
+                    _this.total_euro = parseInt(data[0].data[i][2]) + _this.total_euro;
+                }
+                if (data[0].data[i][3] == 'USD') {
+                    _this.total_usd = parseInt(data[0].data[i][2]) + _this.total_usd;
+                }
+                // console.log(this.alldata)
+                // console.log(Moment(Date.parse(data[0].data[i][9]),'X').format('DD/MM/YYYY'));
+                // // console.log(data[i].shippingeta)
+                // // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
+                // // console.log("Now: " ,Moment(Date()).format('X'))
+                // this.alldata[i].background="black";
+                // if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+                // {
+                //   // console.log("danger")
+                //   this.alldata[i].background= "red"
+                // }
+                // if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+                // {
+                //   // console.log("danger")
+                //   this.alldata[i].background= "green"
+                // }
             }
+            //  console.log(this.alldata)
         });
+    };
+    DataShowComponent.prototype.ExcelDateToJSDate = function (serial) {
+        var utc_days = Math.floor(serial - 25569);
+        var utc_value = utc_days * 86400;
+        var date_info = new Date(utc_value * 1000);
+        var fractional_day = serial - Math.floor(serial) + 0.0000001;
+        var total_seconds = Math.floor(86400 * fractional_day);
+        var seconds = total_seconds % 60;
+        total_seconds -= seconds;
+        var hours = Math.floor(total_seconds / (60 * 60));
+        var minutes = Math.floor(total_seconds / 60) % 60;
+        return new Date(date_info.getFullYear(), date_info.getMonth(), date_info.getDate(), hours, minutes, seconds);
     };
     DataShowComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1149,7 +1188,8 @@ var GetdataService = /** @class */ (function () {
     //   return this.http.get('http://192.168.1.155:3080/fetchs/read_xls_file');
     // }
     GetdataService.prototype.getCSVData = function (url) {
-        return this.http.get(url);
+        return this.http.get(url)
+            .map(function (res) { return res.json(); });
     };
     GetdataService.prototype.getData = function (url) {
         return this.http.get(url)

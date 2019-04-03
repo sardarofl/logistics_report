@@ -11,7 +11,7 @@ const Fetch_Items={
     
 // Parse a file
     const workSheetsFromFile = xlsx.parse('./report/logisticreport.xlsx');
-    console.log(workSheetsFromFile);
+    // console.log(workSheetsFromFile);
     return(workSheetsFromFile);
   },
 

@@ -17,7 +17,7 @@ export class DataShowComponent implements OnInit {
   ) { }
 
   // alldata;
-  alldata:Alldata[];
+  alldata =[];
   total_usd;
   total_euro;
   ngOnInit() {
@@ -28,44 +28,94 @@ export class DataShowComponent implements OnInit {
 
   loadData(){
     
-    this.getdataservice.getData(environment.server_url+'/fetchs/fetch_logistics').subscribe( (data) =>{  
+    this.getdataservice.getCSVData(environment.server_url+'/fetchs/read_xls_file').subscribe( (data) =>{  
       this.total_usd =0;
       this.total_euro =0;
-     this.alldata = data
+     
+      //console.log(data)
+      //this.alldata = data;
+      this.alldata =[];
+     for(let i=4; i<data[0].data.length; i++){
+     // console.log(data[0].data[i])
+     if(data[0].data[i][0] == null)
+     {
+       break;
+     }
+     if(data[0].data[i][9] != null ){
+     data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
+    }
 
-     for(let i=0; i<data.length; i++){
+    if(data[0].data[i][10] != null ){
+     data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
+    }
+
+    if(data[0].data[i][15] != null ){
+      
+     data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+    }
 
 
-        if(data[i].currency == 'EUR')
-        {
-          this.total_euro = parseInt(data[i].invamount) +this.total_euro;
-        }
-        if(data[i].currency == 'USD')
-        {
-          this.total_usd = parseInt(data[i].invamount)  +this.total_usd;
-        }
-        // console.log(data[i].shippingeta)
-        // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
-        // console.log("Now: " ,Moment(Date()).format('X'))
+    if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
+      data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+    }
+    //  if(data[0].data[i][])
 
-        this.alldata[i].background="black";
-        if((parseInt(Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+      this.alldata.push(data[0].data[i]);
+ 
+   
+        if(data[0].data[i][3] == 'EUR')
         {
-          // console.log("danger")
-          this.alldata[i].background= "red"
+          this.total_euro = parseInt(data[0].data[i][2]) +this.total_euro;
         }
-        if((parseInt(Moment(data[i].shippingdep,'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+        if(data[0].data[i][3] == 'USD')
         {
-          // console.log("danger")
-          this.alldata[i].background= "green"
+          this.total_usd = parseInt(data[0].data[i][2])  +this.total_usd;
         }
+      
+        // console.log(this.alldata)
+         // console.log(Moment(Date.parse(data[0].data[i][9]),'X').format('DD/MM/YYYY'));
+        // // console.log(data[i].shippingeta)
+        // // console.log("ETA: ",Moment(data[i].shippingeta,'DD/MM/YYYY').format('X'))
+        // // console.log("Now: " ,Moment(Date()).format('X'))
+
+        // this.alldata[i].background="black";
+        // if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+        // {
+        //   // console.log("danger")
+        //   this.alldata[i].background= "red"
+        // }
+        // if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+        // {
+        //   // console.log("danger")
+        //   this.alldata[i].background= "green"
+        // }
  
      }
+    //  console.log(this.alldata)
 
 
 
     })
   }
+
+   ExcelDateToJSDate(serial) {
+    var utc_days  = Math.floor(serial - 25569);
+    var utc_value = utc_days * 86400;                                        
+    var date_info = new Date(utc_value * 1000);
+ 
+    var fractional_day = serial - Math.floor(serial) + 0.0000001;
+ 
+    var total_seconds = Math.floor(86400 * fractional_day);
+ 
+    var seconds = total_seconds % 60;
+ 
+    total_seconds -= seconds;
+ 
+    var hours = Math.floor(total_seconds / (60 * 60));
+    var minutes = Math.floor(total_seconds / 60) % 60;
+ 
+    return new Date(date_info.getFullYear(), date_info.getMonth(), date_info.getDate(), hours, minutes, seconds);
+ }
 
 }
 

@@ -15,6 +15,7 @@ export class GetdataService {
   // }
     getCSVData(url){
       return this.http.get(url)
+      .map(res =>  res.json()) 
     }
 
     getData(url){

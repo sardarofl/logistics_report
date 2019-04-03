@@ -67,7 +67,7 @@ table{
    padding-left: 10px;
    padding-right: 10px; 
    margin-top: 10px;
-   font-size:1vw;
+   font-size:0.6vw;
    border-radius:4;
 }
 
@@ -78,6 +78,6 @@ table{
 .totals{
     color:white;
     position:fixed;
-    right:100px;
+    right:250px;
     top:8px;
 }

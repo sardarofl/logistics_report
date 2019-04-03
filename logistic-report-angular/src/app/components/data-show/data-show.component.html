@@ -20,21 +20,21 @@
       <th class="backgraund top-right">Gate in </th>
     
       <tr *ngFor = "let item of this.alldata " >
-        <td [style.color]="item.background"  class="colom-style">{{item.supplier}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.invoiceno}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.invamount| currency}} {{item.currency}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.swift}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.supplierreadiness}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.legalization}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.pickup}}</td>
-        <td [style.color]="item.background" class="colom-style"><img *ngIf="item.shippingtype === '1'" style="max-height:20px;" src="/assets/ship.png"><img *ngIf="item.shippingtype === '2'" style="max-height:20px;" src="/assets/flight.png"><img style="max-height:15px;" *ngIf="item.shippingtype === '3'" src="/assets/dhl.png"></td>
-        <td [style.color]="item.background" class="colom-style">{{item.shippingdep}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.shippingeta}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.bank}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.clearance}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.ntra}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.nationalsecurity}}</td>
-        <td [style.color]="item.background" class="colom-style">{{item.gatein}}</td>
+        <td [style.color]="item.background"  class="colom-style">{{item[0]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[1]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[2]| currency}} {{item[3]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[4]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[5]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[6]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[7]}}</td>
+        <td [style.color]="item.background" class="colom-style"><img *ngIf="item[8] === 'ship'" style="max-height:20px;" src="/assets/ship.png"><img *ngIf="item[8]  === 'air'" style="max-height:20px;" src="/assets/flight.png"><img style="max-height:15px;" *ngIf="item[8]  === 'dhl'" src="/assets/dhl.png"></td>
+        <td [style.color]="item.background" class="colom-style">{{item[9]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[10]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[11]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[12]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[13]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[14]}}</td>
+        <td [style.color]="item.background" class="colom-style">{{item[15]}}</td>
       </tr>
     </table>
 
