@@ -1292,7 +1292,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    server_url: 'http://localhost:3080'
+    server_url: 'http://192.168.1.110:3080'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
