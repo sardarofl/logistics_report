@@ -773,7 +773,7 @@ module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<img src=\"/assets/backgroundlogistic.png\" class=\"backgraud-photo \">\r\n<div class=\"\"><img src=\"assets/modified ati logo.png\" class=\"logo-class circlearoundimage\"/></div>\r\n<div class=\"containers\">\r\n  <div class=\"row\">\r\n    <table  class=\"class-for-table\">\r\n      <th class=\"backgraund top-left\">Supplier</th>\r\n      <th class=\"backgraund-two\">Invoice No.</th>\r\n      <th class=\"backgraund\">Inv. Amount</th>\r\n      <th class=\"backgraund-two\"> <img src=''>swift</th>\r\n      <th class=\"backgraund\">Supplier Readiness</th>\r\n      <th class=\"backgraund-two\">Legalization</th>\r\n      <th class=\"backgraund\">Pick Up</th>\r\n      <th class=\"backgraund-two\">Type</th>\r\n      <th class=\"backgraund\">Dep.</th>\r\n      <th class=\"backgraund-two\">ETA</th>\r\n      <th class=\"backgraund\">Bank</th>\r\n      <th class=\"backgraund-two\">Clearance</th>\r\n      <th class=\"backgraund\">NTRA</th>\r\n      <th class=\"backgraund-two\">Nat. Security</th>\r\n      <th class=\"backgraund top-right\">Gate in </th>\r\n    \r\n      <tr *ngFor = \"let item of this.alldata \" >\r\n        <td [style.color]=\"item.background\"  class=\"colom-style\">{{item[0]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[1]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[2]| currency}} {{item[3]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[4]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[5]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[6]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[7]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\"><img *ngIf=\"item[8] === 'ship'\" style=\"max-height:20px;\" src=\"/assets/ship.png\"><img *ngIf=\"item[8]  === 'air'\" style=\"max-height:20px;\" src=\"/assets/flight.png\"><img style=\"max-height:15px;\" *ngIf=\"item[8]  === 'dhl'\" src=\"/assets/dhl.png\"></td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[9]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[10]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[11]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[12]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[13]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[14]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[15]}}</td>\r\n      </tr>\r\n    </table>\r\n\r\n  </div>\r\n</div>\r\n\r\n<div class=\"totals\">\r\n  <span><h4>Total USD: {{total_usd}}, Total EUR: {{total_euro}}</h4></span>\r\n</div>"
+module.exports = "<img src=\"/assets/backgroundlogistic.png\" class=\"backgraud-photo \">\r\n<div class=\"\"><img src=\"assets/modified ati logo.png\" class=\"logo-class circlearoundimage\"/></div>\r\n<div class=\"containers\">\r\n  <div class=\"row\">\r\n    <table  class=\"class-for-table\">\r\n      <th class=\"backgraund top-left\">Supplier</th>\r\n      <th class=\"backgraund top-left\">Project</th>\r\n      <th class=\"backgraund-two\">Invoice No.</th>\r\n      <th class=\"backgraund\">Inv. Amount</th>\r\n      <th class=\"backgraund-two\"> <img src=''>swift</th>\r\n      <th class=\"backgraund\">Supplier Readiness</th>\r\n      <th class=\"backgraund-two\">Legalization</th>\r\n      <th class=\"backgraund\">Pick Up</th>\r\n      <th class=\"backgraund-two\">Type</th>\r\n      <th class=\"backgraund\">Dep.</th>\r\n      <th class=\"backgraund-two\">ETA</th>\r\n      <th class=\"backgraund\">Bank</th>\r\n      <th class=\"backgraund-two\">Clearance</th>\r\n      <th class=\"backgraund\">NTRA</th>\r\n      <th class=\"backgraund-two\">Nat. Security</th>\r\n      <th class=\"backgraund top-right\">Gate in </th>\r\n    \r\n      <tr *ngFor = \"let item of this.alldata \" >\r\n        <td [style.color]=\"item.background\"  class=\"colom-style\">{{item[0]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[1]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[2]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[3]| currency}} {{item[4]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[5]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[6]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[7]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[8]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\"><img *ngIf=\"item[9] === 'ship'\" style=\"max-height:20px;\" src=\"/assets/ship.png\"><img *ngIf=\"item[9]  === 'air'\" style=\"max-height:20px;\" src=\"/assets/flight.png\"><img style=\"max-height:15px;\" *ngIf=\"item[9]  === 'dhl'\" src=\"/assets/dhl.png\"></td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[10]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[11]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[12]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[13]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[14]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[15]}}</td>\r\n        <td [style.color]=\"item.background\" class=\"colom-style\">{{item[16]}}</td>\r\n      </tr>\r\n    </table>\r\n\r\n  </div>\r\n</div>\r\n\r\n<div class=\"totals\">\r\n  <span><h4>Total USD: {{total_usd}}, Total EUR: {{total_euro}}</h4></span>\r\n</div>"
 
 /***/ }),
 
@@ -828,24 +828,28 @@ var DataShowComponent = /** @class */ (function () {
                 if (data[0].data[i][0] == null) {
                     break;
                 }
-                if (data[0].data[i][9] != null) {
-                    data[0].data[i][9] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
-                }
                 if (data[0].data[i][10] != null) {
                     data[0].data[i][10] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
                 }
-                if (data[0].data[i][15] != null) {
-                    data[0].data[i][15] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+                if (data[0].data[i][1] != null) {
+                    data[0].data[i][11] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][11])).format('DD/MM/YYYY');
                 }
-                if (data[0].data[i][7] != 'Done' && data[0].data[i][7] != null) {
-                    data[0].data[i][7] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+                if (data[0].data[i][16] != null) {
+                    data[0].data[i][16] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][16])).format('DD/MM/YYYY');
+                }
+                if (data[0].data[i][6] != 'Done' && data[0].data[i][6] != 'Not Yet' && data[0].data[i][6] != 'Waiting Payment' && data[0].data[i][6] != null) {
+                    data[0].data[i][6] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][6])).format('DD/MM/YYYY');
+                }
+                if (data[0].data[i][8] != 'Done' && data[0].data[i][8] != 'Not Yet' && data[0].data[i][8] != 'Waiting Payment' && data[0].data[i][8] != null) {
+                    console.log(data[0].data[i][8]);
+                    data[0].data[i][8] = _node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(_this.ExcelDateToJSDate(data[0].data[i][8])).format('DD/MM/YYYY');
                 }
                 data[0].data[i].background = "black";
-                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][10], 'DD/MM/YYYY').format('X')) - (86400 * 3)) < parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
+                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][11], 'DD/MM/YYYY').format('X')) - (86400 * 3)) < parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
                     console.log("danger");
                     data[0].data[i].background = "red";
                 }
-                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][11], 'DD/MM/YYYY').format('X'))) > parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
+                if ((parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(data[0].data[i][12], 'DD/MM/YYYY').format('X'))) > parseInt(_node_modules_moment_moment_js__WEBPACK_IMPORTED_MODULE_3__(Date()).format('X'))) {
                     console.log("danger");
                     data[0].data[i].background = "green";
                 }
@@ -870,11 +874,11 @@ var DataShowComponent = /** @class */ (function () {
                 // }
                 //  if(data[0].data[i][])
                 _this.alldata.push(data[0].data[i]);
-                if (data[0].data[i][3] == 'EUR') {
-                    _this.total_euro = parseInt(data[0].data[i][2]) + _this.total_euro;
+                if (data[0].data[i][4] == 'EUR') {
+                    _this.total_euro = parseInt(data[0].data[i][3]) + _this.total_euro;
                 }
-                if (data[0].data[i][3] == 'USD') {
-                    _this.total_usd = parseInt(data[0].data[i][2]) + _this.total_usd;
+                if (data[0].data[i][4] == 'USD') {
+                    _this.total_usd = parseInt(data[0].data[i][3]) + _this.total_usd;
                 }
                 // console.log(this.alldata)
                 // console.log(Moment(Date.parse(data[0].data[i][9]),'X').format('DD/MM/YYYY'));

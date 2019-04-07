@@ -41,30 +41,36 @@ export class DataShowComponent implements OnInit {
         {
           break;
         }
-        if(data[0].data[i][9] != null ){
-        data[0].data[i][9] = Moment(this.ExcelDateToJSDate(data[0].data[i][9])).format('DD/MM/YYYY');
-       }
-   
-       if(data[0].data[i][10] != null ){
+        if(data[0].data[i][10] != null ){
         data[0].data[i][10] = Moment(this.ExcelDateToJSDate(data[0].data[i][10])).format('DD/MM/YYYY');
        }
    
-       if(data[0].data[i][15] != null ){
-         
-        data[0].data[i][15] = Moment(this.ExcelDateToJSDate(data[0].data[i][15])).format('DD/MM/YYYY');
+       if(data[0].data[i][1] != null ){
+        data[0].data[i][11] = Moment(this.ExcelDateToJSDate(data[0].data[i][11])).format('DD/MM/YYYY');
        }
-       if(data[0].data[i][7] != 'Done' && data[0].data[i][7] != null){
-        data[0].data[i][7] = Moment(this.ExcelDateToJSDate(data[0].data[i][7])).format('DD/MM/YYYY');
+   
+       if(data[0].data[i][16] != null ){
+         
+        data[0].data[i][16] = Moment(this.ExcelDateToJSDate(data[0].data[i][16])).format('DD/MM/YYYY');
+       }
+       if(data[0].data[i][6] != 'Done'&& data[0].data[i][6] != 'Not Yet' && data[0].data[i][6] != 'Waiting Payment' && data[0].data[i][6] != null){
+    
+        data[0].data[i][6] = Moment(this.ExcelDateToJSDate(data[0].data[i][6])).format('DD/MM/YYYY');
       }
+      if(data[0].data[i][8] != 'Done' && data[0].data[i][8] != 'Not Yet' && data[0].data[i][8] != 'Waiting Payment' && data[0].data[i][8] != null){
+        console.log(data[0].data[i][8])
+
+       data[0].data[i][8] = Moment(this.ExcelDateToJSDate(data[0].data[i][8])).format('DD/MM/YYYY');
+     }
         data[0].data[i].background = "black"
 
 
-        if((parseInt(Moment(data[0].data[i][10],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
+        if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))-(86400*3)) < parseInt(Moment(Date()).format('X')))
         {
           console.log("danger")
           data[0].data[i].background= "red"
         }
-        if((parseInt(Moment(data[0].data[i][11],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
+        if((parseInt(Moment(data[0].data[i][12],'DD/MM/YYYY').format('X'))) > parseInt(Moment(Date()).format('X')))
         {
           console.log("danger")
           data[0].data[i].background= "green"
@@ -101,13 +107,13 @@ export class DataShowComponent implements OnInit {
       this.alldata.push(data[0].data[i]);
  
    
-        if(data[0].data[i][3] == 'EUR')
+        if(data[0].data[i][4] == 'EUR')
         {
-          this.total_euro = parseInt(data[0].data[i][2]) +this.total_euro;
+          this.total_euro = parseInt(data[0].data[i][3]) +this.total_euro;
         }
-        if(data[0].data[i][3] == 'USD')
+        if(data[0].data[i][4] == 'USD')
         {
-          this.total_usd = parseInt(data[0].data[i][2])  +this.total_usd;
+          this.total_usd = parseInt(data[0].data[i][3])  +this.total_usd;
         }
       
         // console.log(this.alldata)
