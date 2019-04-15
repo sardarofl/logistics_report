@@ -20,6 +20,8 @@ export class DataShowComponent implements OnInit {
   alldata =[];
   total_usd;
   total_euro;
+
+  counter=0;
   ngOnInit() {
     this.loadData();
 
@@ -36,7 +38,7 @@ export class DataShowComponent implements OnInit {
       //this.alldata = data;
       this.alldata =[];
 
-      for(let i=4; i<data[0].data.length; i++){
+      for(let i=this.counter; i<data[0].data.length; i++){
         if(data[0].data[i][0] == null)
         {
           break;
@@ -79,7 +81,7 @@ export class DataShowComponent implements OnInit {
       }
       console.log(data[0])
 
-     for(let i=4; i<data[0].data.length; i++){
+     for(let i=this.counter; i<data[0].data.length; i++){
      // console.log(data[0].data[i])
      if(data[0].data[i][0] == null)
      {
@@ -130,6 +132,12 @@ export class DataShowComponent implements OnInit {
 
 
     })
+
+    this.counter = this.counter+8;
+    if(this.counter>=this.alldata.length)
+    {
+      this.counter=4;
+    }
   }
 
    ExcelDateToJSDate(serial) {

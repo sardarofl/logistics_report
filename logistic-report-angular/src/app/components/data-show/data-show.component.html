@@ -20,7 +20,7 @@
       <th class="backgraund-two">Nat. Security</th>
       <th class="backgraund top-right">Gate in </th>
     
-      <tr *ngFor = "let item of this.alldata " >
+      <tr *ngFor = "let item of this.alldata | slice:0:8; " >
         <td [style.color]="item.background"  class="colom-style">{{item[0]}}</td>
         <td [style.color]="item.background" class="colom-style">{{item[1]}}</td>
         <td [style.color]="item.background" class="colom-style">{{item[2]}}</td>
