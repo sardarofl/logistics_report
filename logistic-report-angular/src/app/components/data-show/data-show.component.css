@@ -49,9 +49,7 @@ th{
 .top-right{
     border-top-right-radius: 10px;
 }
-.top-left{
-    border-top-left-radius: 10px;
-}
+
 table{
     font-family: 'Montserrat', sans-serif;
 
@@ -64,8 +62,7 @@ table{
     height:100%;
 }
 .class-for-table{
-   padding-left: 10px;
-   padding-right: 10px; 
+
    margin-top: 10px;
    font-size:0.85vw;
    border-radius:4;

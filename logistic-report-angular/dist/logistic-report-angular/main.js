@@ -762,7 +762,7 @@ var BeLogisticAddDataComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    min-width:98%;\r\n    max-width:98%;\r\n    font-size: 1.1vw;\r\n    padding-top: 20px;\r\n}\r\n.backgraund{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n\r\n}\r\n.logo-class{\r\n   /* width: 15%; */\r\n   max-height:60px;\r\n   margin-left: 20px;\r\n   margin-top: 20px; \r\n   padding:10px;\r\n}\r\n.circlearoundimage{\r\n    background-color:white;\r\n    border-radius:30px;\r\n \r\n}\r\n.backgraund-two{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n.colom-style{\r\n    border: none;\r\n    border-radius: 0;\r\n    padding: 20px;\r\n    text-align: center;\r\n    color: #000000 ;\r\n    background-color: #ffffff;\r\n}\r\nth{\r\n    border-radius: 0;\r\n \r\n}\r\n.top-right{\r\n    border-top-right-radius: 10px;\r\n}\r\n.top-left{\r\n    border-top-left-radius: 10px;\r\n}\r\ntable{\r\n    font-family: 'Montserrat', sans-serif;\r\n\r\n}\r\n.backgraud-photo{\r\n    z-index: -100;\r\n    position: fixed;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.class-for-table{\r\n   padding-left: 10px;\r\n   padding-right: 10px; \r\n   margin-top: 10px;\r\n   font-size:0.85vw;\r\n   border-radius:4;\r\n}\r\n.containers{\r\n    padding:10px;\r\n}\r\n.totals{\r\n    color:white;\r\n    position:fixed;\r\n    right:250px;\r\n    top:8px;\r\n}\r\n"
+module.exports = ".al-one{\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    min-width:98%;\r\n    max-width:98%;\r\n    font-size: 1.1vw;\r\n    padding-top: 20px;\r\n}\r\n.backgraund{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n\r\n}\r\n.logo-class{\r\n   /* width: 15%; */\r\n   max-height:60px;\r\n   margin-left: 20px;\r\n   margin-top: 20px; \r\n   padding:10px;\r\n}\r\n.circlearoundimage{\r\n    background-color:white;\r\n    border-radius:30px;\r\n \r\n}\r\n.backgraund-two{\r\n    border: none;\r\n    background-color: #FB4250;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n.colom-style{\r\n    border: none;\r\n    border-radius: 0;\r\n    padding: 20px;\r\n    text-align: center;\r\n    color: #000000 ;\r\n    background-color: #ffffff;\r\n}\r\nth{\r\n    border-radius: 0;\r\n \r\n}\r\n.top-right{\r\n    border-top-right-radius: 10px;\r\n}\r\ntable{\r\n    font-family: 'Montserrat', sans-serif;\r\n\r\n}\r\n.backgraud-photo{\r\n    z-index: -100;\r\n    position: fixed;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.class-for-table{\r\n\r\n   margin-top: 10px;\r\n   font-size:0.85vw;\r\n   border-radius:4;\r\n}\r\n.containers{\r\n    padding:10px;\r\n}\r\n.totals{\r\n    color:white;\r\n    position:fixed;\r\n    right:250px;\r\n    top:8px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1313,7 +1313,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    server_url: 'http://192.168.1.110:3080'
+    server_url: 'http://192.168.1.210:3080'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
